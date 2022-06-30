@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import TopBar from "./components/TopBar";
+import Movies from "./components/Movies";
+import MoviesWithRedux from "./components/MoviesWithRedux";
+import { Card } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TopBar />
+      <Card
+        style={{
+          backgroundColor: "lightGrey",
+          padding: 25,
+          height:'80vh',
+          marginLeft: "10%",
+          marginRight: "10%",
+          marginBottom: 25,
+          marginTop: 25,
+          overflow:'auto'
+        }}
+        className="App"
+      >
+        {/* <Movies/> */}
+        <MoviesWithRedux />
+      </Card>
+    </>
   );
 }
 
